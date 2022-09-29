@@ -6,15 +6,13 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
-import java.util.UUID;
 
 @Path("/api")
 public class ExampleResource {
 
     @GET
-    @Counted
     @Path("/xml")
-    @Produces(MediaType.TEXT_PLAIN)
+    @Produces(MediaType.APPLICATION_XML)
     public SimpleProperty getPropertyXML() {
         return new SimpleProperty("Lenovo", "ThinkPad");
     }
