@@ -15,8 +15,8 @@ public class ExampleResource {
     @Counted
     @Path("/xml")
     @Produces(MediaType.TEXT_PLAIN)
-    public String hello() {
-        return "Hello from the other side";
+    public SimpleProperty getPropertyXML() {
+        return new SimpleProperty("Lenovo", "ThinkPad");
     }
 
     @GET
@@ -24,7 +24,6 @@ public class ExampleResource {
     @Produces(MediaType.APPLICATION_JSON)
     public SimpleProperty getPropertyJSON ()
     {
-        SimpleProperty p = new SimpleProperty("Lenovo", "ThinkPad");
-        return p;
+        return new SimpleProperty("Lenovo", "ThinkPad");
     }
 }
